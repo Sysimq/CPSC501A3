@@ -1,5 +1,7 @@
 package org.example;
 
+import java.lang.reflect.*;
+
 /**
  * CPSC 501
  * Inspector starter class
@@ -16,5 +18,4 @@ public class Inspector {
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
 
     }
-
 }
