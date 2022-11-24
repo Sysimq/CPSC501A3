@@ -2,94 +2,24 @@
 Filename: script2.txt
 Running Test: ClassA
 Recursive: true
+CLASS INSEPCTION
 Class: org.example.ClassA
   Super Class Name: java.lang.Object
+    CLASS INSEPCTION
     Class: java.lang.Object
       Constructor Name: java.lang.Object
         Constructor Modifiers: public
-      Method: finalize
-        Method Return Type: void
-        Method Modifiers: protected
-        Method Exceptions: java.lang.Throwable
-      Method: wait
-        Method Return Type: void
-        Method Modifiers: public final
-        Method Exceptions: java.lang.InterruptedException
-        Method Parameter Types: long
-        Method Parameter Types: int
-      Method: wait
-        Method Return Type: void
-        Method Modifiers: public final
-        Method Exceptions: java.lang.InterruptedException
-      Method: wait
-        Method Return Type: void
-        Method Modifiers: public final native
-        Method Exceptions: java.lang.InterruptedException
-        Method Parameter Types: long
-      Method: equals
-        Method Return Type: boolean
-        Method Modifiers: public
-        Method Parameter Types: java.lang.Object
-      Method: toString
-        Method Return Type: class java.lang.String
-        Method Modifiers: public
-      Method: hashCode
-        Method Return Type: int
-        Method Modifiers: public native
-      Method: getClass
-        Method Return Type: class java.lang.Class
-        Method Modifiers: public final native
-      Method: clone
-        Method Return Type: class java.lang.Object
-        Method Modifiers: protected native
-        Method Exceptions: java.lang.CloneNotSupportedException
-      Method: notify
-        Method Return Type: void
-        Method Modifiers: public final native
-      Method: notifyAll
-        Method Return Type: void
-        Method Modifiers: public final native
   Class Implements Interface: java.io.Serializable
+    CLASS INSEPCTION
     Class: java.io.Serializable
         No super class found
   Class Implements Interface: java.lang.Runnable
+    CLASS INSEPCTION
     Class: java.lang.Runnable
         No super class found
-      Method: run
-        Method Return Type: void
-        Method Modifiers: public abstract
   Constructor Name: org.example.ClassA
     Constructor Modifiers: public
   Constructor Name: org.example.ClassA
-    Constructor Modifiers: public
     Constructor Parameter Types: int
-  Method: run
-    Method Return Type: void
-    Method Modifiers: public
-  Method: toString
-    Method Return Type: class java.lang.String
-    Method Modifiers: public
-  Method: setVal
-    Method Return Type: void
-    Method Modifiers: public
-    Method Exceptions: java.lang.Exception
-    Method Parameter Types: int
-  Method: getVal
-    Method Return Type: int
-    Method Modifiers: public
-  Method: printSomething
-    Method Return Type: void
-    Method Modifiers: private
-  Field Name: val
-    Field Type: int
-    Field Modifiers: private
-    Value: 12
-  Field Name: val2
-    Field Type: double
-    Field Modifiers: private
-    Value: 0.2
-  Field Name: val3
-    Field Type: boolean
-    Field Modifiers: private
-    Value: true
+    Constructor Modifiers: public
 ======================================================
