@@ -96,17 +96,28 @@ See commit: b0753fbf7c67ca67c09c98be150c504b141d8c34
 ## Rename Variable
 The next couple of refactorings I performed dealth with the fact that some of the variable names are not informative.
 ```
-        Class cType = c.getComponentType();
-        int t = depth +1;
+    Class cType = c.getComponentType();
 
+```
+```
+  int t = depth +1;
 ```
 I rename some of the variable to give more information about the varialbe.
 ```
         Class componentType = c.getComponentType();
-        int tab = depth +1;
 
 ```
+```
+        int tab = depth +1;
+```
 See commit: b0753fbf7c67ca67c09c98be150c504b141d8c34
+
+## Javadoc
+Then I added some javadoc so other can better understand the code.
+
+
+
+
 
 
 
