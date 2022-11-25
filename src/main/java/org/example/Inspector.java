@@ -99,7 +99,7 @@ public class Inspector {
     //print methods
     private void printMethodInfo(int depth, int t, Method m){
         //print methods name
-        print("Method: "+m.getName(), depth);
+        print("Method Name: "+m.getName(), depth);
         //print exception the method throws
         Class[] exceptions = m.getExceptionTypes();
         if (exceptions.length > 0){
