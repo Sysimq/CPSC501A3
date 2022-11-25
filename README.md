@@ -1,7 +1,17 @@
 # CPSC501A3
 
-## Getting started
+## Description
+The goal of this assignment is to create a reflective object inspector that does a complete introspection of an object at runtime. The inspector will be implemented in a Java class called Inspector, and will be invoked using the method:
+public void inspect(Object obj, boolean recursive)
+This method will introspect on the object specified by the first parameter obj, printing what it
+finds to standard output. 
 
+## Getting started
+All source code can be found in `cpsc501a3/src/main/java/org/example` and all output script text file in `cpsc501a3`.
+
+Bonus code can be found in `cpsc501a3/src/main/java/org/example/DriverBonus.java`
+
+To run `DriverBonus.java`, you need 3 arguments: ` [Inspector Class] [Class to inspect] [Recursive(True/False)]`. For example, you can run code using following 3 command line arguments `org.example.Inspector org.example.ClassB True`
 
 
 # Refactoring
@@ -114,6 +124,7 @@ See commit: b0753fbf7c67ca67c09c98be150c504b141d8c34
 
 ## Javadoc
 Then I added some javadoc so other can better understand the code.
+See commit: 60c4ca07734ecc92ca0e439c84e669cfe6a3f38e
 
 
 
