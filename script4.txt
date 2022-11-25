@@ -7,46 +7,46 @@ Class Name: org.example.ClassD
     Class Name: java.lang.Object
       Constructor Name: java.lang.Object
         Constructor Modifiers: public
-      Method: finalize
+      Method Name: finalize
         Method Exceptions: java.lang.Throwable
         Method Return Type: void
         Method Modifiers: protected
-      Method: wait
+      Method Name: wait
         Method Exceptions: java.lang.InterruptedException
         Method Parameter Types: long
         Method Parameter Types: int
         Method Return Type: void
         Method Modifiers: public final
-      Method: wait
+      Method Name: wait
         Method Exceptions: java.lang.InterruptedException
         Method Return Type: void
         Method Modifiers: public final
-      Method: wait
+      Method Name: wait
         Method Exceptions: java.lang.InterruptedException
         Method Parameter Types: long
         Method Return Type: void
         Method Modifiers: public final native
-      Method: equals
+      Method Name: equals
         Method Parameter Types: java.lang.Object
         Method Return Type: boolean
         Method Modifiers: public
-      Method: toString
+      Method Name: toString
         Method Return Type: class java.lang.String
         Method Modifiers: public
-      Method: hashCode
+      Method Name: hashCode
         Method Return Type: int
         Method Modifiers: public native
-      Method: getClass
+      Method Name: getClass
         Method Return Type: class java.lang.Class
         Method Modifiers: public final native
-      Method: clone
+      Method Name: clone
         Method Exceptions: java.lang.CloneNotSupportedException
         Method Return Type: class java.lang.Object
         Method Modifiers: protected native
-      Method: notify
+      Method Name: notify
         Method Return Type: void
         Method Modifiers: public final native
-      Method: notifyAll
+      Method Name: notifyAll
         Method Return Type: void
         Method Modifiers: public final native
   Constructor Name: org.example.ClassD
@@ -54,10 +54,10 @@ Class Name: org.example.ClassD
   Constructor Name: org.example.ClassD
     Constructor Parameter Types: int
     Constructor Modifiers: public
-  Method: toString
+  Method Name: toString
     Method Return Type: class java.lang.String
     Method Modifiers: public
-  Method: getVal3
+  Method Name: getVal3
     Method Return Type: int
     Method Modifiers: public
   Field Name: val
@@ -69,46 +69,46 @@ Class Name: org.example.ClassD
         Class Name: java.lang.Object
           Constructor Name: java.lang.Object
             Constructor Modifiers: public
-          Method: finalize
+          Method Name: finalize
             Method Exceptions: java.lang.Throwable
             Method Return Type: void
             Method Modifiers: protected
-          Method: wait
+          Method Name: wait
             Method Exceptions: java.lang.InterruptedException
             Method Parameter Types: long
             Method Parameter Types: int
             Method Return Type: void
             Method Modifiers: public final
-          Method: wait
+          Method Name: wait
             Method Exceptions: java.lang.InterruptedException
             Method Return Type: void
             Method Modifiers: public final
-          Method: wait
+          Method Name: wait
             Method Exceptions: java.lang.InterruptedException
             Method Parameter Types: long
             Method Return Type: void
             Method Modifiers: public final native
-          Method: equals
+          Method Name: equals
             Method Parameter Types: java.lang.Object
             Method Return Type: boolean
             Method Modifiers: public
-          Method: toString
+          Method Name: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
-          Method: hashCode
+          Method Name: hashCode
             Method Return Type: int
             Method Modifiers: public native
-          Method: getClass
+          Method Name: getClass
             Method Return Type: class java.lang.Class
             Method Modifiers: public final native
-          Method: clone
+          Method Name: clone
             Method Exceptions: java.lang.CloneNotSupportedException
             Method Return Type: class java.lang.Object
             Method Modifiers: protected native
-          Method: notify
+          Method Name: notify
             Method Return Type: void
             Method Modifiers: public final native
-          Method: notifyAll
+          Method Name: notifyAll
             Method Return Type: void
             Method Modifiers: public final native
       Class Implements Interface: java.io.Serializable
@@ -117,7 +117,7 @@ Class Name: org.example.ClassD
       Class Implements Interface: java.lang.Runnable
         Class Name: java.lang.Runnable
             No super class found
-          Method: run
+          Method Name: run
             Method Return Type: void
             Method Modifiers: public abstract
       Constructor Name: org.example.ClassA
@@ -125,21 +125,21 @@ Class Name: org.example.ClassD
       Constructor Name: org.example.ClassA
         Constructor Parameter Types: int
         Constructor Modifiers: public
-      Method: run
+      Method Name: run
         Method Return Type: void
         Method Modifiers: public
-      Method: toString
+      Method Name: toString
         Method Return Type: class java.lang.String
         Method Modifiers: public
-      Method: printSomething
+      Method Name: printSomething
         Method Return Type: void
         Method Modifiers: private
-      Method: setVal
+      Method Name: setVal
         Method Exceptions: java.lang.Exception
         Method Parameter Types: int
         Method Return Type: void
         Method Modifiers: public
-      Method: getVal
+      Method Name: getVal
         Method Return Type: int
         Method Modifiers: public
       Field Name: val

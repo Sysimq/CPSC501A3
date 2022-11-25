@@ -68,23 +68,23 @@ public class Inspector {
         }
     }
     //print constructor info
-    private void printConstructorInfo(int depth, int t, Constructor con){
+    private void printConstructorInfo(int depth, int tab, Constructor con){
         //print constructor name
         print("Constructor Name: " +con.getName(), depth);
         //print constructor exception
         Class[] exceptions = con.getExceptionTypes();
         if(exceptions.length >0){
             for (Class e: exceptions){
-                print("Constructor Exceptions: "+ e.getName(), t);
+                print("Constructor Exceptions: "+ e.getName(), tab);
             }
         }
         //print constructor parameters
         Class[] paramTypes = con.getParameterTypes();
         for(Class paramType: paramTypes){
-            print("Constructor Parameter Types: " + paramType.getName(),t);
+            print("Constructor Parameter Types: " + paramType.getName(),tab);
         }
         //print constructor modifiers
-        print("Constructor Modifiers: "+Modifier.toString(con.getModifiers()),t);
+        print("Constructor Modifiers: "+Modifier.toString(con.getModifiers()),tab);
     }
     //Get the methods info that the class declares
     public void getMethod(Class c, int depth){
@@ -97,28 +97,28 @@ public class Inspector {
         }
     }
     //print methods
-    private void printMethodInfo(int depth, int t, Method m){
+    private void printMethodInfo(int depth, int tab, Method m){
         //print methods name
         print("Method Name: "+m.getName(), depth);
         //print exception the method throws
         Class[] exceptions = m.getExceptionTypes();
         if (exceptions.length > 0){
             for (Class e: exceptions){
-                print("Method Exceptions: "+e.getName(), t);
+                print("Method Exceptions: "+e.getName(), tab);
             }
         }
         //print method's parameters
         Class[] parameters = m.getParameterTypes();
         if(parameters.length > 0){
             for(Class p: parameters){
-                print("Method Parameter Types: "+p.getName(), t);
+                print("Method Parameter Types: "+p.getName(), tab);
             }
         }
         //print method's return type
-        print("Method Return Type: " + m.getReturnType(), t);
+        print("Method Return Type: " + m.getReturnType(), tab);
         //print method modifiers
         String modifier = Modifier.toString(m.getModifiers());
-        print("Method Modifiers: " + modifier, t);
+        print("Method Modifiers: " + modifier, tab);
 
     }
     //Get the field information
@@ -131,69 +131,76 @@ public class Inspector {
         }
     }
     //print field information
-    private void printFieldInfo(Object obj, boolean recursive, int depth, int t, Field f){
+    private void printFieldInfo(Object obj, boolean recursive, int depth, int tab, Field f){
+        //set field accessible
         f.setAccessible(true);
+        //print field name
         print("Field Name: "+ f.getName(), depth);
+        //print field type
         Class type = f.getType();
-        print("Field Type: "+type.getSimpleName(),t);
+        print("Field Type: "+type.getSimpleName(),tab);
+        //print field modifier
         String modifiers = Modifier.toString(f.getModifiers());
-        print("Field Modifiers: " + modifiers, t);
+        print("Field Modifiers: " + modifiers, tab);
 
         try{
             Object fieldObj = f.get(obj);
-
-            if(fieldObj == null){
-                print("Value: null", t);
-            }
-            else if (type.isPrimitive()) {
-                print("Value: "+fieldObj.toString(), t);
-            }
-            else if (type.isArray()) {
-                getArrayInfo(f.getType(),fieldObj,recursive,t);
-            }
-            else{
-                if(recursive){
-                    print("Value: ",t);
-                    inspectClass(type, fieldObj, true, t);
-                }
-                else{
-                    print("Reference Value: "+ fieldObj.getClass().getName()
-                            + "@" + Integer.toHexString(System.identityHashCode(obj)), t);
-                }
-            }
+            inspectFieldObj(obj, recursive, tab, f, type, fieldObj);
         }catch(IllegalAccessException e){
             e.printStackTrace();
         }
     }
+    private void inspectFieldObj(Object obj, boolean recursive, int tab, Field f, Class type, Object fieldObj){
+        if(fieldObj == null){
+            print("Value: null", tab);
+        }
+        else if (type.isPrimitive()) {
+            print("Value: "+fieldObj.toString(), tab);
+        }
+        else if (type.isArray()) {
+            getArrayInfo(f.getType(),fieldObj,recursive,tab);
+        }
+        else{
+            if(recursive){
+                print("Value: ",tab);
+                inspectClass(type, fieldObj, true, tab);
+            }
+            else{
+                print("Reference Value: "+ fieldObj.getClass().getName()
+                        + "@" + Integer.toHexString(System.identityHashCode(obj)), tab);
+            }
+        }
+    }
+
     //Inspect array information
     public void getArrayInfo(Class c, Object obj, boolean recursive, int depth){
-        Class cType = c.getComponentType();
-        int t = depth +1;
+        Class componentType = c.getComponentType();
+        int tab = depth +1;
         int aLen = Array.getLength(obj);
 
-        print("Component Type: " + cType.getSimpleName(), depth + 1);
+        print("Component Type: " + componentType.getSimpleName(), depth + 1);
         print("Array Length: " + aLen, depth + 1);
 
         for (int i = 0; i < aLen; i++) {
             Object arrayObj = Array.get(obj, i);
 
             if (arrayObj == null) {
-                print(i +": null",t+1);
+                print(i +": null",tab+1);
             }
-            else if (cType.isPrimitive()) {
-                print(i +": "+ arrayObj.getClass().getName(), t+1);
+            else if (componentType.isPrimitive()) {
+                print(i +": "+ arrayObj.getClass().getName(), tab+1);
             }
-            else if (cType.isArray()) {
-                print(i + ": Array", t+1);
-                getArrayInfo(arrayObj.getClass(), arrayObj, recursive, t+1);
+            else if (componentType.isArray()) {
+                print(i + ": Array", tab+1);
+                getArrayInfo(arrayObj.getClass(), arrayObj, recursive, tab+1);
             }
             else {
                 if (recursive) {
-                    print(i + ": ", t+1);
-                    inspectClass(arrayObj.getClass(), arrayObj, true, t+1);
+                    print(i + ": ", tab+1);
+                    inspectClass(arrayObj.getClass(), arrayObj, true, tab+1);
                 }
                 else {
-                    print("Value: " + arrayObj.getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(arrayObj)), t+1);
+                    print("Value: " + arrayObj.getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(arrayObj)), tab+1);
                 }
             }
 
