@@ -53,6 +53,12 @@ class InspectorTest {
         assert(output.toString().contains(expected));
     }
     @Test
+    public void testObjectArray(){
+        new Inspector().inspect(new ClassB[10], false);
+        String expected = "Array Length: 10";
+        assert(output.toString().contains(expected));
+    }
+    @Test
     public void testInterfaceInfo(){
         new Inspector().getInterfaceInfo(String.class, "",false,0);
         String expected = "Class Implements Interface: java.io.Serializable";
@@ -128,15 +134,10 @@ class InspectorTest {
         expected = "java.lang.Character";
         assert(output.toString().contains(expected));
     }
-
-
-
-
-
-
-    
-
-
-
-
+    @Test
+    public void testPrint(){
+        new Inspector().print("test one tab", 1);
+        String expected = "  test one tab\n";
+        assert(output.toString().equals(expected));
+    }
 }
