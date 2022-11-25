@@ -1,5 +1,19 @@
 ======================================================
 Filename: script6.txt
-Running Test: [Lorg.example.ClassB;@33c7353a
+Running Test: [Lorg.example.ClassB;@1c20c684
 Recursive: true
+  Component Type: ClassB
+  Array Length: 12
+    0: null
+    1: null
+    2: null
+    3: null
+    4: null
+    5: null
+    6: null
+    7: null
+    8: null
+    9: null
+    10: null
+    11: null
 ======================================================
