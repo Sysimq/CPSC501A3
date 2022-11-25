@@ -7,7 +7,7 @@
 # Refactoring
 
 ## Long Method
-One bad code smell I had was `Long Method`. My `printFieldInfo` method was getting long and hard to read. As a result I decide to apply `Extract Method` technique in order to better organize the code. 
+One of the bad code smell I had was `Long Method`. My `printFieldInfo` method was getting long and hard to read. As a result I decide to apply `Extract Method` technique in order to better organize the code. 
 ```
 private void printFieldInfo(Object obj, boolean recursive, int depth, int t, Field f){
         f.setAccessible(true);
@@ -93,6 +93,22 @@ I first extracted the functionality which performs inspecting field object into 
 See commit: b0753fbf7c67ca67c09c98be150c504b141d8c34
 
 
+## Rename Variable
+The next couple of refactorings I performed dealth with the fact that some of the variable names are not informative.
+```
+        Class cType = c.getComponentType();
+        int t = depth +1;
 
-## Rename Field
+```
+I rename some of the variable to give more information about the varialbe.
+```
+        Class componentType = c.getComponentType();
+        int tab = depth +1;
+
+```
+See commit: b0753fbf7c67ca67c09c98be150c504b141d8c34
+
+
+
+
 
