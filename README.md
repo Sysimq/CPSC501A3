@@ -6,7 +6,7 @@ public void inspect(Object obj, boolean recursive)
 This method will introspect on the object specified by the first parameter obj, printing what it
 finds to standard output. 
 
-## Getting started
+## Direction
 All source code can be found in `cpsc501a3/src/main/java/org/example` and all output script text file in `cpsc501a3`.
 
 Bonus code can be found in `cpsc501a3/src/main/java/org/example/DriverBonus.java`
