@@ -225,10 +225,6 @@ Recursive: true
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
-          Method: func3
-            Method Parameter Types: int
-            Method Return Type: void
-            Method Modifiers: public abstract
           Method: func0
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -250,6 +246,10 @@ Recursive: true
             Method Parameter Types: java.lang.String
             Method Return Type: int
             Method Modifiers: public
+          Method: func3
+            Method Parameter Types: int
+            Method Return Type: void
+            Method Modifiers: public abstract
           Field Name: val2
             Field Type: ClassA
             Field Modifiers: private
