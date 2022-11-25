@@ -7,7 +7,7 @@ Recursive: true
     0: null
     1: null
     2: null
-    3: Array
+    3: 
     Class Name: org.example.ClassB
       Super Class Name: org.example.ClassC
         Class Name: org.example.ClassC
@@ -73,6 +73,7 @@ Recursive: true
               Field Name: val
                 Field Type: ClassA
                 Field Modifiers: private
+                Value: 
                 Class Name: org.example.ClassA
                   Super Class Name: java.lang.Object
                     Class Name: java.lang.Object
@@ -140,6 +141,9 @@ Recursive: true
                   Method: toString
                     Method Return Type: class java.lang.String
                     Method Modifiers: public
+                  Method: printSomething
+                    Method Return Type: void
+                    Method Modifiers: private
                   Method: setVal
                     Method Exceptions: java.lang.Exception
                     Method Parameter Types: int
@@ -148,9 +152,6 @@ Recursive: true
                   Method: getVal
                     Method Return Type: int
                     Method Modifiers: public
-                  Method: printSomething
-                    Method Return Type: void
-                    Method Modifiers: private
                   Field Name: val
                     Field Type: int
                     Field Modifiers: private
@@ -253,6 +254,7 @@ Recursive: true
           Field Name: val2
             Field Type: ClassA
             Field Modifiers: private
+            Value: 
             Class Name: org.example.ClassA
               Super Class Name: java.lang.Object
                 Class Name: java.lang.Object
@@ -320,6 +322,9 @@ Recursive: true
               Method: toString
                 Method Return Type: class java.lang.String
                 Method Modifiers: public
+              Method: printSomething
+                Method Return Type: void
+                Method Modifiers: private
               Method: setVal
                 Method Exceptions: java.lang.Exception
                 Method Parameter Types: int
@@ -328,9 +333,6 @@ Recursive: true
               Method: getVal
                 Method Return Type: int
                 Method Modifiers: public
-              Method: printSomething
-                Method Return Type: void
-                Method Modifiers: private
               Field Name: val
                 Field Type: int
                 Field Modifiers: private
@@ -346,6 +348,7 @@ Recursive: true
           Field Name: val3
             Field Type: ClassA
             Field Modifiers: private
+            Value: 
             Class Name: org.example.ClassA
               Super Class Name: java.lang.Object
                 Class Name: java.lang.Object
@@ -413,6 +416,9 @@ Recursive: true
               Method: toString
                 Method Return Type: class java.lang.String
                 Method Modifiers: public
+              Method: printSomething
+                Method Return Type: void
+                Method Modifiers: private
               Method: setVal
                 Method Exceptions: java.lang.Exception
                 Method Parameter Types: int
@@ -421,9 +427,6 @@ Recursive: true
               Method: getVal
                 Method Return Type: int
                 Method Modifiers: public
-              Method: printSomething
-                Method Return Type: void
-                Method Modifiers: private
               Field Name: val
                 Field Type: int
                 Field Modifiers: private
@@ -439,6 +442,7 @@ Recursive: true
           Field Name: val4
             Field Type: ClassA
             Field Modifiers: private
+            Value: 
             Class Name: org.example.ClassA
               Super Class Name: java.lang.Object
                 Class Name: java.lang.Object
@@ -506,6 +510,9 @@ Recursive: true
               Method: toString
                 Method Return Type: class java.lang.String
                 Method Modifiers: public
+              Method: printSomething
+                Method Return Type: void
+                Method Modifiers: private
               Method: setVal
                 Method Exceptions: java.lang.Exception
                 Method Parameter Types: int
@@ -514,9 +521,6 @@ Recursive: true
               Method: getVal
                 Method Return Type: int
                 Method Modifiers: public
-              Method: printSomething
-                Method Return Type: void
-                Method Modifiers: private
               Field Name: val
                 Field Type: int
                 Field Modifiers: private
@@ -551,6 +555,7 @@ Recursive: true
       Field Name: val
         Field Type: ClassA
         Field Modifiers: private
+        Value: 
         Class Name: org.example.ClassA
           Super Class Name: java.lang.Object
             Class Name: java.lang.Object
@@ -618,6 +623,9 @@ Recursive: true
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
+          Method: printSomething
+            Method Return Type: void
+            Method Modifiers: private
           Method: setVal
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -626,9 +634,6 @@ Recursive: true
           Method: getVal
             Method Return Type: int
             Method Modifiers: public
-          Method: printSomething
-            Method Return Type: void
-            Method Modifiers: private
           Field Name: val
             Field Type: int
             Field Modifiers: private
@@ -644,6 +649,7 @@ Recursive: true
       Field Name: val2
         Field Type: ClassA
         Field Modifiers: private
+        Value: 
         Class Name: org.example.ClassA
           Super Class Name: java.lang.Object
             Class Name: java.lang.Object
@@ -711,6 +717,9 @@ Recursive: true
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
+          Method: printSomething
+            Method Return Type: void
+            Method Modifiers: private
           Method: setVal
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -719,9 +728,6 @@ Recursive: true
           Method: getVal
             Method Return Type: int
             Method Modifiers: public
-          Method: printSomething
-            Method Return Type: void
-            Method Modifiers: private
           Field Name: val
             Field Type: int
             Field Modifiers: private

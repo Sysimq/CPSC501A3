@@ -47,6 +47,7 @@ public class Inspector {
         }
     }
 
+    //Get name of each interface the class implements
     public void getInterfaceInfo(Class c, Object obj, boolean recursive, int depth){
         Class[] classInterfaces = c.getInterfaces();
         if (classInterfaces.length > 0){
@@ -57,6 +58,7 @@ public class Inspector {
         }
     }
 
+    //Get the constructors that the class declares
     public void getConstructor(Class c, int depth){
         Constructor[] classConstructors = c.getDeclaredConstructors();
         if (classConstructors.length > 0){
@@ -65,21 +67,26 @@ public class Inspector {
             }
         }
     }
+    //print constructor info
     private void printConstructorInfo(int depth, int t, Constructor con){
+        //print constructor name
         print("Constructor Name: " +con.getName(), depth);
+        //print constructor exception
         Class[] exceptions = con.getExceptionTypes();
         if(exceptions.length >0){
             for (Class e: exceptions){
                 print("Constructor Exceptions: "+ e.getName(), t);
             }
         }
+        //print constructor parameters
         Class[] paramTypes = con.getParameterTypes();
         for(Class paramType: paramTypes){
             print("Constructor Parameter Types: " + paramType.getName(),t);
         }
+        //print constructor modifiers
         print("Constructor Modifiers: "+Modifier.toString(con.getModifiers()),t);
     }
-
+    //Get the methods info that the class declares
     public void getMethod(Class c, int depth){
         Method[] methods = c.getDeclaredMethods();
 
@@ -89,25 +96,32 @@ public class Inspector {
             }
         }
     }
+    //print methods
     private void printMethodInfo(int depth, int t, Method m){
+        //print methods name
         print("Method: "+m.getName(), depth);
+        //print exception the method throws
         Class[] exceptions = m.getExceptionTypes();
         if (exceptions.length > 0){
             for (Class e: exceptions){
                 print("Method Exceptions: "+e.getName(), t);
             }
         }
+        //print method's parameters
         Class[] parameters = m.getParameterTypes();
         if(parameters.length > 0){
             for(Class p: parameters){
                 print("Method Parameter Types: "+p.getName(), t);
             }
         }
+        //print method's return type
         print("Method Return Type: " + m.getReturnType(), t);
+        //print method modifiers
         String modifier = Modifier.toString(m.getModifiers());
         print("Method Modifiers: " + modifier, t);
 
     }
+    //Get the field information
     public void getFieldInfo(Class c, Object obj, boolean recursive, int depth){
         Field[] fields = c.getDeclaredFields();
         if(fields.length > 0){
@@ -116,6 +130,7 @@ public class Inspector {
             }
         }
     }
+    //print field information
     private void printFieldInfo(Object obj, boolean recursive, int depth, int t, Field f){
         f.setAccessible(true);
         print("Field Name: "+ f.getName(), depth);
@@ -138,6 +153,7 @@ public class Inspector {
             }
             else{
                 if(recursive){
+                    print("Value: ",t);
                     inspectClass(type, fieldObj, true, t);
                 }
                 else{
@@ -149,15 +165,16 @@ public class Inspector {
             e.printStackTrace();
         }
     }
+    //Inspect array information
     public void getArrayInfo(Class c, Object obj, boolean recursive, int depth){
         Class cType = c.getComponentType();
         int t = depth +1;
-        int aLength = Array.getLength(obj);
+        int aLen = Array.getLength(obj);
 
         print("Component Type: " + cType.getSimpleName(), depth + 1);
-        print("Array Length: " + aLength, depth + 1);
+        print("Array Length: " + aLen, depth + 1);
 
-        for (int i = 0; i < aLength; i++) {
+        for (int i = 0; i < aLen; i++) {
             Object arrayObj = Array.get(obj, i);
 
             if (arrayObj == null) {
@@ -167,11 +184,12 @@ public class Inspector {
                 print(i +": "+ arrayObj.getClass().getName(), t+1);
             }
             else if (cType.isArray()) {
+                print(i + ": Array", t+1);
                 getArrayInfo(arrayObj.getClass(), arrayObj, recursive, t+1);
             }
             else {
                 if (recursive) {
-                    print(i + ": Array", t+1);
+                    print(i + ": ", t+1);
                     inspectClass(arrayObj.getClass(), arrayObj, true, t+1);
                 }
                 else {

@@ -67,6 +67,7 @@ Class Name: org.example.ClassB
           Field Name: val
             Field Type: ClassA
             Field Modifiers: private
+            Value: 
             Class Name: org.example.ClassA
               Super Class Name: java.lang.Object
                 Class Name: java.lang.Object
@@ -134,6 +135,9 @@ Class Name: org.example.ClassB
               Method: toString
                 Method Return Type: class java.lang.String
                 Method Modifiers: public
+              Method: printSomething
+                Method Return Type: void
+                Method Modifiers: private
               Method: setVal
                 Method Exceptions: java.lang.Exception
                 Method Parameter Types: int
@@ -142,9 +146,6 @@ Class Name: org.example.ClassB
               Method: getVal
                 Method Return Type: int
                 Method Modifiers: public
-              Method: printSomething
-                Method Return Type: void
-                Method Modifiers: private
               Field Name: val
                 Field Type: int
                 Field Modifiers: private
@@ -247,6 +248,7 @@ Class Name: org.example.ClassB
       Field Name: val2
         Field Type: ClassA
         Field Modifiers: private
+        Value: 
         Class Name: org.example.ClassA
           Super Class Name: java.lang.Object
             Class Name: java.lang.Object
@@ -314,6 +316,9 @@ Class Name: org.example.ClassB
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
+          Method: printSomething
+            Method Return Type: void
+            Method Modifiers: private
           Method: setVal
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -322,9 +327,6 @@ Class Name: org.example.ClassB
           Method: getVal
             Method Return Type: int
             Method Modifiers: public
-          Method: printSomething
-            Method Return Type: void
-            Method Modifiers: private
           Field Name: val
             Field Type: int
             Field Modifiers: private
@@ -340,6 +342,7 @@ Class Name: org.example.ClassB
       Field Name: val3
         Field Type: ClassA
         Field Modifiers: private
+        Value: 
         Class Name: org.example.ClassA
           Super Class Name: java.lang.Object
             Class Name: java.lang.Object
@@ -407,6 +410,9 @@ Class Name: org.example.ClassB
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
+          Method: printSomething
+            Method Return Type: void
+            Method Modifiers: private
           Method: setVal
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -415,9 +421,6 @@ Class Name: org.example.ClassB
           Method: getVal
             Method Return Type: int
             Method Modifiers: public
-          Method: printSomething
-            Method Return Type: void
-            Method Modifiers: private
           Field Name: val
             Field Type: int
             Field Modifiers: private
@@ -433,6 +436,7 @@ Class Name: org.example.ClassB
       Field Name: val4
         Field Type: ClassA
         Field Modifiers: private
+        Value: 
         Class Name: org.example.ClassA
           Super Class Name: java.lang.Object
             Class Name: java.lang.Object
@@ -500,6 +504,9 @@ Class Name: org.example.ClassB
           Method: toString
             Method Return Type: class java.lang.String
             Method Modifiers: public
+          Method: printSomething
+            Method Return Type: void
+            Method Modifiers: private
           Method: setVal
             Method Exceptions: java.lang.Exception
             Method Parameter Types: int
@@ -508,9 +515,6 @@ Class Name: org.example.ClassB
           Method: getVal
             Method Return Type: int
             Method Modifiers: public
-          Method: printSomething
-            Method Return Type: void
-            Method Modifiers: private
           Field Name: val
             Field Type: int
             Field Modifiers: private
@@ -545,6 +549,7 @@ Class Name: org.example.ClassB
   Field Name: val
     Field Type: ClassA
     Field Modifiers: private
+    Value: 
     Class Name: org.example.ClassA
       Super Class Name: java.lang.Object
         Class Name: java.lang.Object
@@ -612,6 +617,9 @@ Class Name: org.example.ClassB
       Method: toString
         Method Return Type: class java.lang.String
         Method Modifiers: public
+      Method: printSomething
+        Method Return Type: void
+        Method Modifiers: private
       Method: setVal
         Method Exceptions: java.lang.Exception
         Method Parameter Types: int
@@ -620,9 +628,6 @@ Class Name: org.example.ClassB
       Method: getVal
         Method Return Type: int
         Method Modifiers: public
-      Method: printSomething
-        Method Return Type: void
-        Method Modifiers: private
       Field Name: val
         Field Type: int
         Field Modifiers: private
@@ -638,6 +643,7 @@ Class Name: org.example.ClassB
   Field Name: val2
     Field Type: ClassA
     Field Modifiers: private
+    Value: 
     Class Name: org.example.ClassA
       Super Class Name: java.lang.Object
         Class Name: java.lang.Object
@@ -705,6 +711,9 @@ Class Name: org.example.ClassB
       Method: toString
         Method Return Type: class java.lang.String
         Method Modifiers: public
+      Method: printSomething
+        Method Return Type: void
+        Method Modifiers: private
       Method: setVal
         Method Exceptions: java.lang.Exception
         Method Parameter Types: int
@@ -713,9 +722,6 @@ Class Name: org.example.ClassB
       Method: getVal
         Method Return Type: int
         Method Modifiers: public
-      Method: printSomething
-        Method Return Type: void
-        Method Modifiers: private
       Field Name: val
         Field Type: int
         Field Modifiers: private

@@ -895,6 +895,7 @@ Class Name: java.lang.String
   Field Name: CASE_INSENSITIVE_ORDER
     Field Type: Comparator
     Field Modifiers: public static final
+    Value: 
     Class Name: java.util.Comparator
         No super class found
       Method: equals

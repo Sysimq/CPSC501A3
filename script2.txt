@@ -69,6 +69,9 @@ Class Name: org.example.ClassA
   Method: toString
     Method Return Type: class java.lang.String
     Method Modifiers: public
+  Method: printSomething
+    Method Return Type: void
+    Method Modifiers: private
   Method: setVal
     Method Exceptions: java.lang.Exception
     Method Parameter Types: int
@@ -77,9 +80,6 @@ Class Name: org.example.ClassA
   Method: getVal
     Method Return Type: int
     Method Modifiers: public
-  Method: printSomething
-    Method Return Type: void
-    Method Modifiers: private
   Field Name: val
     Field Type: int
     Field Modifiers: private
