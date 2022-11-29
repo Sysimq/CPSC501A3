@@ -13,6 +13,9 @@ Bonus code can be found in `cpsc501a3/src/main/java/org/example/DriverBonus.java
 
 To run `DriverBonus.java`, you need 3 arguments: ` [Inspector Class] [Class to inspect] [Recursive(True/False)]`. For example, you can run code using following 3 command line arguments `org.example.Inspector org.example.ClassB True`
 
+For VM flag, add following commands to vm configuration:
+```--add-opens java.base/java.lang=ALL-UNNAMED```
+
 
 # Refactoring
 
